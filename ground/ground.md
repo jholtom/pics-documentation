@@ -13,6 +13,11 @@ For the receiving dish we use an off the shelf patch antenna to feed the 10-ft d
 ### Transmitting Antennas
 	The transmit antenna is an off the shelf dipole tuned in the 450 megahertz band. This antenna is used as the feed one of the 10-ft dishes. It develops approximately 10 db gain with a very fat main lobe.  There is a spare dipole feed laying around in the PICS Ground Station area.
 ### Rotators 
-	We have 5 m2 rc2800 rotators. They are controlled by m2 az100s and 1000els. The rotators azimuth and elevation are controlled independently. They are driven by a program called G predict. This program has been superseded by satnogs network and client applications. Sat nogs aka Cygnus use py ephemera to predict satellite locations. ON the day of launch we need to get the kepler two line elements from Nored and input them to the satnogs data base application. 
+	We have 5 M2 RC2800 rotators. They are controlled by M2 AZ1000s and EL1000s. The rotators azimuth and elevation are controlled independently. They are driven by a program called GPredict. This program has been superseded by the SATNOGS network and client applications. SATNOGS aka Cygnus use pyephemera to predict satellite locations. On the day of launch we need to get the kepler two line elements from NORAD and input them to the SATNOGS DB application.  We have modified the SATNOGS network and client code to become Cygnus, which is what I've called the compendium of ground station applications.  The primary extensions allow for multiple antennas to be controlled simultaneously as we are a full-duplex system with two independent bands. 
 ### Power amplifier 
 	The transmit antenna is driven by an 100 watt power amplifier. This power amplifier comes from Richardson RFPD. A custom heat sink and fan system have been built. It is controlled by an Arduino. Power for this amplifier is provided by two Astron power supplies. Care needs to be taken to ensure the 100 watts does not leak all over the 5th floor. The cable currently being used is appropriately shielded.
+
+## Cygnus (SATNOGS Network)
+### Network
+### DB
+### Client
