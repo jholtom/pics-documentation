@@ -4,3 +4,6 @@ It is a good place to start.
 
 ## Modeling
 The link model used for the PICS Communications system came from the amateur radio communities repository of crazy excel spreadsheets.  A working version can be found here in PICSLinkModel.xls
+
+## The PICS Communications Interface
+ - Signal Flow Diagram between each direction
