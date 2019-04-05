@@ -3,7 +3,7 @@
 ## Software Defined Radio (SDR)
 The SDR we use is called the ETTUS USRP B210. Ours is configured to use a GPSDO (GPS Disciplined Oscillator) for its clock. It feeds a powerful desktop computer with digitally converted RF data. On the desktop computer we run GNURadio. There are two flowgraphs, one called GSReceive, one called GSTransmit. GSReceive receives all modes of communication from the satellite. GS Transmit handles all transmissions to the satellite. GSReceive and GSTransmit both implement an SPP packet router. They interact with the other parts of the system through standard UDP sockets. 
 ### GSReceive
-	The flow graph begins with a USRP source block. This is then fed to a band pass filter. After the band pass filter, it feeds into a GMSK Demodulator. That block feeds into a sync word detection system. Once the appropriate slync work is detected an SDLP frame is chunked off and fed to the deframer. After the deframer, the spp router directs packets to the appropriate destination.
+	The flow graph begins with a USRP source block. This is then fed to a band pass filter. After the band pass filter, it feeds into a GMSK Demodulator. That block feeds into a sync word detection system. Once the appropriate sync word is detected (within a margin of error) an SDLP frame is chunked off and fed to the deframer. After the deframer, the spp router directs packets to the appropriate destination.
 ### GSTransmit
 
 ## Antennas
