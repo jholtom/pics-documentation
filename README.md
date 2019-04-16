@@ -13,7 +13,6 @@ The link model used for the PICS Communications system came from the amateur rad
 - The Elysium Radio parses the message and it passes through the Network Layer router (`nl_route`)
 - We will assume this message is destined for the ground
     - In `nl_route`, this means that the message is not destined for the elysium firmware, so it is given to `pass_func` which is a function pointer to the appropriate passing function for whichever bus delivered the message.  In our case, it points to `rf_pass` since it came in from UART and needs to pass onto the RF side.
-    -
 - The packet is already valid SPP as transmitted from the SOM, so it needs to just be put on the Link Layer (SDLP)
 - The packet is passed to the RF Thread for handling. `RFPost` places the message into a Mailbox and alerts the SDLP (Link Layer) to handle it.
 - The CCSDS SDLP Link Layer handles the message with `elyRFDLLBuildFrame`.  This function wraps the SPP packet in the SDLP frame, and performs the reed solomon encoding on it.
