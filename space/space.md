@@ -2,6 +2,8 @@
 The space segment consists of the radio and its interaction with the flight computer
 ## Flight Computer - SOM
 The SOM runs a custom kernel module called `ccsds-kernel-drivers` written by Jacob Holtom, that implements (to a degree) the CCSDS Space Packet Protocol (SPP) standard in kernel as an Address Family.  This allows it to be used with the standard UNIX socket interface.  Reference code can be found in the repository at `github.com/jholtom/ccsds-kernel-drivers`.  The most recent version for use on the satellite is in the `linux-2.6.33` branch.  The `byuspacecraft` organization maintains another version, that is more up to date for the PICS mission, and eventually that code will be merged back into the repository under `jholtom` (NOTE: as of 03/07/2019: This has not been done)
+    - A linux kernel module is an extension of core functionality to the linux kernel.  It is implemented in pure C.
+    - The UNIX socket interface is a standard set of functions to interact with any sort of network data.  A good API Reference is here: https://en.m.wikipedia.org/wiki/Berkeley_sockets
 
 ## Radio
 The radio used is an (BYU/Jacob Holtom/Dr. Doran Wilde/Adamant Aerospace) Elysium. Notes on it can be found in `elysium.md`
